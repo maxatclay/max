@@ -1,0 +1,207 @@
+/* ============================================
+   TANAY MISHRA - CUSTOM OVERRIDES
+   "The Automation King of Bali"
+   ============================================ */
+
+/* Tanay gets a special tropical-chaos theme */
+.tanay-page {
+  --accent-1: #ff00ff;
+  --accent-2: #00ffff;
+  --accent-3: #ffff00;
+}
+
+/* Special header for Tanay */
+.tanay-header {
+  text-align: center;
+  padding: 30px 15px 15px;
+  position: relative;
+}
+
+.tanay-header h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: clamp(28px, 6vw, 56px);
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.tanay-header .subtitle {
+  font-family: 'Rubik Glitch', system-ui;
+  font-size: clamp(14px, 3vw, 22px);
+  color: var(--neon-yellow);
+}
+
+/* Profile pic - generates a fun avatar since we don't have a real photo */
+.tanay-avatar {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  border: 5px solid gold;
+  box-shadow:
+    0 0 20px var(--neon-pink),
+    0 0 40px var(--neon-blue),
+    0 0 60px var(--neon-pink);
+  animation: avatar-pulse 2s ease-in-out infinite alternate;
+  position: relative;
+}
+
+@keyframes avatar-pulse {
+  0% {
+    box-shadow:
+      0 0 20px var(--neon-pink),
+      0 0 40px var(--neon-blue),
+      0 0 60px var(--neon-pink);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow:
+      0 0 30px var(--neon-blue),
+      0 0 60px var(--neon-pink),
+      0 0 90px var(--neon-blue);
+    transform: scale(1.05);
+  }
+}
+
+/* Special "certifications" badge strip */
+.cert-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.cert-badge {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  padding: 6px 12px;
+  border: 2px solid;
+  animation: badge-glow 1.5s ease-in-out infinite alternate;
+  text-transform: uppercase;
+}
+
+.cert-badge.clay {
+  background: rgba(255, 102, 0, 0.2);
+  border-color: #ff6600;
+  color: #ff9944;
+}
+
+.cert-badge.lindy {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: #00ffff;
+  color: #00ffff;
+}
+
+.cert-badge.bots {
+  background: rgba(255, 0, 255, 0.2);
+  border-color: #ff00ff;
+  color: #ff66ff;
+}
+
+.cert-badge.accenture {
+  background: rgba(160, 0, 255, 0.2);
+  border-color: #a000ff;
+  color: #cc66ff;
+}
+
+@keyframes badge-glow {
+  0% { filter: brightness(1); }
+  100% { filter: brightness(1.4); }
+}
+
+/* Bali-themed decorative elements */
+.bali-vibes {
+  text-align: center;
+  font-size: 24px;
+  padding: 5px;
+  letter-spacing: 10px;
+}
+
+/* Experience timeline - but make it chaotic */
+.chaos-timeline {
+  position: relative;
+  padding: 10px 0;
+}
+
+.chaos-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: repeating-linear-gradient(
+    180deg,
+    var(--neon-pink) 0px,
+    var(--neon-pink) 10px,
+    var(--neon-blue) 10px,
+    var(--neon-blue) 20px,
+    var(--neon-green) 20px,
+    var(--neon-green) 30px
+  );
+}
+
+.timeline-item {
+  margin-left: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px dashed var(--neon-pink);
+  background: rgba(255, 0, 255, 0.05);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '⚡';
+  position: absolute;
+  left: -30px;
+  top: 10px;
+  font-size: 16px;
+}
+
+.timeline-item h4 {
+  font-family: var(--silkscreen);
+  font-size: 11px;
+  color: var(--neon-yellow);
+  margin-bottom: 4px;
+}
+
+.timeline-item .timeline-company {
+  font-family: var(--comic-sans);
+  color: var(--neon-blue);
+  font-size: 13px;
+}
+
+.timeline-item .timeline-desc {
+  font-family: var(--comic-sans);
+  color: #ccccff;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Cookie game special styling for Tanay */
+.cookie-section {
+  text-align: center;
+}
+
+.cookie-btn {
+  font-size: 80px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.1s;
+  user-select: none;
+  filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.5));
+}
+
+.cookie-btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 30px rgba(255, 165, 0, 0.8));
+}
+
+.cookie-btn:active {
+  transform: scale(0.9);
+}
